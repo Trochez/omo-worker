@@ -3,13 +3,14 @@
 **Version**: 1.0.0  
 **Compatible With**: OpenCode 1.x, oh-my-opencode 3.x+  
 **Author**: OpenCode Community  
-**License**: Open Source
+**License**: Open Source  
+**GitHub**: https://github.com/Trochez/omo-worker
 
 ---
 
 ## What is OMO-Worker?
 
-**OMO-Worker** is a worker protocol skill for OpenCode subagents spawned by `/omo-team`. It provides standardized instructions for workers to:
+**OMO-Worker** is a worker protocol skill for OpenCode subagents spawned by [`/omo-team`](https://github.com/Trochez/omo-team). It provides standardized instructions for workers to:
 
 - Parse their assigned task
 - Execute work efficiently
@@ -18,7 +19,7 @@
 
 ## Why It Exists
 
-When `/omo-team` spawns workers, each worker needs to know:
+When [`/omo-team`](https://github.com/Trochez/omo-team) spawns workers, each worker needs to know:
 1. How to parse the task context (team name, worker ID, output path)
 2. Where to write results (`.omo/state/omo-team/<team>/workers/<id>/result.md`)
 3. How to report completion (leader polls via `background_output()`)
@@ -53,7 +54,7 @@ ls -la ~/.agents/skills/omo-worker/
 
 ## Usage
 
-OMO-Worker is **automatically loaded** by workers spawned via `/omo-team`. You don't invoke it directly.
+OMO-Worker is **automatically loaded** by workers spawned via [`/omo-team`](https://github.com/Trochez/omo-team). You don't invoke it directly.
 
 ### Example Flow
 
@@ -141,7 +142,7 @@ If your task is taking longer than expected:
 
 | Feature | OMO-Worker | OMX Worker |
 |---------|------------|------------|
-| **Parent** | `/omo-team` | `$team` (OMX) |
+| **Parent** | [`/omo-team`](https://github.com/Trochez/omo-team) | `$team` (OMX) |
 | **Spawning** | `task()` tool | tmux panes |
 | **Communication** | Write result.md | Mailbox files |
 | **Complexity** | Simple | Complex (ACK, claim, mailbox) |
@@ -161,8 +162,8 @@ Workers may be assigned a category:
 
 ## Related Skills
 
-- **`/omo-team`**: The leader skill that spawns workers
-- **`/omo-ralplan`**: Consensus planning workflow
+- **[`/omo-team`](https://github.com/Trochez/omo-team)**: The leader skill that spawns workers
+- **[`/omo-ralplan`](https://github.com/Trochez/omo-ralplan)**: Consensus planning workflow
 - **`/worker`**: OMX tmux-based worker (different system)
 
 ## Troubleshooting
